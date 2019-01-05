@@ -2,11 +2,11 @@
 </ActionBar>
 
 <GridLayout class="page" rows="auto,30,*,auto">
-    <DatePicker  (loaded)="onPicker1Loaded($event)" row="0" verticalAlignment="top" (dateChange)="onDate1Changed($event)" ></DatePicker>
+    <DatePicker  (loaded)="onPicker1Loaded($event)" row="0" verticalAlignment="top" (dateChange)="onDate1Changed($event)"  ></DatePicker>
     
-    <Label text="{{daysString}}" row="1" textWrap="false" backgroundColor="snow" verticalAlignment="center" fontSize="20" horizontalAlignment="center"></Label>
+    <Label text="{{daysString | number}} Days" row="1" textWrap="false" backgroundColor="snow" verticalAlignment="center" fontSize="20" horizontalAlignment="center"></Label>
 
-    <Label text="{{dateDifference}}" row="2" textWrap="true" backgroundColor="snow" verticalAlignment="center" fontSize="14" horizontalAlignment="center"></Label>
+    <Label  text="{{dateDifference}}" row="2" textWrap="true" backgroundColor="snow" verticalAlignment="center" fontSize="14" horizontalAlignment="center"></Label>
 
     <DatePicker  (loaded)="onPicker2Loaded($event)" row="3" verticalAlignment="bottom" (dateChange)="onDate2Changed($event)" ></DatePicker>
 </GridLayout>

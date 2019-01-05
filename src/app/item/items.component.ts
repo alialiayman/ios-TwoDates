@@ -14,7 +14,7 @@ export class ItemsComponent implements OnInit {
 
     }
 
-    dateDifference: string;
+    dateDifference: string = "0 Year 0 Month 0 Day";
     date1: Date;
     date2: Date;
 
@@ -23,10 +23,10 @@ export class ItemsComponent implements OnInit {
         this.date1 = datePicker.date;
         this.CalculateDifference();
     }
-    public daysString: string;
+    public daysString: number = 0;
     CalculateDifference(): void {
         let difference = Math.abs(Math.round((this.date1.getTime() - this.date2.getTime()) / (1000 * 60 * 60 * 24)));
-        this.daysString = difference + ' Day';
+        this.daysString = difference;
         let humanizedString: string = '';
         let years = difference / 365;
         if (years >= 1) {
